@@ -1,0 +1,221 @@
+{
+  "contractName": "EgorasProxyInterface",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_egorasServiceAddr",
+          "type": "address"
+        }
+      ],
+      "name": "EgorasServiceCreated",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_egorasServiceAddr\",\"type\":\"address\"}],\"name\":\"EgorasServiceCreated\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxyInterface.sol\":\"EgorasProxyInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxyInterface.sol\":{\"keccak256\":\"0x320751e602d7122cec693bf625190b291ac4287ce6af7e236d964597f9f72f26\",\"urls\":[\"bzz-raw://6b66288fcba4c88312f8bb73ea6534e692071fa2ff1f0cdf56b7f02fa0042575\",\"dweb:/ipfs/QmYioj8CbBDzrzTAE8XFtUGV3dyKBFR8Qcm1ZKtJW7UKzT\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220a4a9418dd23ea5b14d8cb15cfc9ed778c31b71554c3eb9e32c54b54b9d418ae264736f6c634300060a0033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220a4a9418dd23ea5b14d8cb15cfc9ed778c31b71554c3eb9e32c54b54b9d418ae264736f6c634300060a0033",
+  "immutableReferences": {},
+  "sourceMap": "35:95:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "35:95:1:-:0;;;;;",
+  "source": "pragma solidity >=0.4.0 <0.7.0;\r\n\r\ncontract EgorasProxyInterface {\r\n    event EgorasServiceCreated(address _egorasServiceAddr);\r\n}\r\n",
+  "sourcePath": "C:\\xampp\\htdocs\\ngorasSmartContract\\contracts\\EgorasProxyInterface.sol",
+  "ast": {
+    "absolutePath": "/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxyInterface.sol",
+    "exportedSymbols": {
+      "EgorasProxyInterface": [
+        45
+      ]
+    },
+    "id": 46,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 40,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 45,
+        "linearizedBaseContracts": [
+          45
+        ],
+        "name": "EgorasProxyInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 44,
+            "name": "EgorasServiceCreated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_egorasServiceAddr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 44,
+                  "src": "99:26:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "99:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "98:28:1"
+            },
+            "src": "72:55:1"
+          }
+        ],
+        "scope": 46,
+        "src": "35:95:1"
+      }
+    ],
+    "src": "0:132:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxyInterface.sol",
+    "exportedSymbols": {
+      "EgorasProxyInterface": [
+        45
+      ]
+    },
+    "id": 46,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 40,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 45,
+        "linearizedBaseContracts": [
+          45
+        ],
+        "name": "EgorasProxyInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 44,
+            "name": "EgorasServiceCreated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_egorasServiceAddr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 44,
+                  "src": "99:26:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "99:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "98:28:1"
+            },
+            "src": "72:55:1"
+          }
+        ],
+        "scope": 46,
+        "src": "35:95:1"
+      }
+    ],
+    "src": "0:132:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-24T11:59:11.920Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

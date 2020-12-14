@@ -1,0 +1,1170 @@
+{
+  "contractName": "EgorasProxy",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_egorasServiceAddr",
+          "type": "address"
+        }
+      ],
+      "name": "EgorasServiceCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_market",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_deployer",
+          "type": "address"
+        }
+      ],
+      "name": "createEgorasService",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "_egorasServiceAddr",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_egorasServiceAddr\",\"type\":\"address\"}],\"name\":\"EgorasServiceCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_market\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_deployer\",\"type\":\"address\"}],\"name\":\"createEgorasService\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_egorasServiceAddr\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxy.sol\":\"EgorasProxy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxy.sol\":{\"keccak256\":\"0x9819e2fe708b31223a67870902b48004a5b0f9eb176be01b7b9b25e3997cb907\",\"urls\":[\"bzz-raw://b30f7e91fa18570ed3f69eec7d9a548345d41f39e320775bd57710995c2e27d6\",\"dweb:/ipfs/QmUdfpYAVxqv3yDfrjiNjN8dFdRjdmXXQWxhFPJFRVop4b\"]},\"/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxyInterface.sol\":{\"keccak256\":\"0x320751e602d7122cec693bf625190b291ac4287ce6af7e236d964597f9f72f26\",\"urls\":[\"bzz-raw://6b66288fcba4c88312f8bb73ea6534e692071fa2ff1f0cdf56b7f02fa0042575\",\"dweb:/ipfs/QmYioj8CbBDzrzTAE8XFtUGV3dyKBFR8Qcm1ZKtJW7UKzT\"]},\"/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasService.sol\":{\"keccak256\":\"0xb03142d6ccb13d630604aad9fbf8de64ea8e65110080f11a6cb3a635c8e9cc93\",\"urls\":[\"bzz-raw://529ef3d7d6b658ad27f9c0e743a6d4176ca96e9b5c4721c47e1ea4d0573875bc\",\"dweb:/ipfs/QmU6RWDnSsk8kkZ6KG9JJZpCinUVVDSf6sQZSFhkcSNgtB\"]},\"/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasServiceInterface.sol\":{\"keccak256\":\"0x296f8452ea3fdb6a018ff5aced9dd7494cc9f94ed16c0b9c904ef098ecc37c76\",\"urls\":[\"bzz-raw://d3da90ca24db6d238a9c8dcf7fb63f4265ec14b24e750780414e237d94b33717\",\"dweb:/ipfs/QmWnjEU9wLQheM7vQXg5bp2jFubAf56FruBBDSAApCYTmj\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xaa0e11a791bc975d581a4f5b7a8d9c16a880a354c89312318ae072ae3e740409\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://982d8b344f76193834260436d74c81e5a8f9e89106bb4cd72bbaabda4f3f59c2\",\"dweb:/ipfs/QmSrvP5TkQRhKDVCTpsV3uaKLBhkt7PjUY89vdtM9o5ybK\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610204806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806345fc613b14610030575b600080fd5b6100686004803603606081101561004657600080fd5b506001600160a01b038135811691602081013582169160409091013516610084565b604080516001600160a01b039092168252519081900360200190f35b60008084848460405161009690610121565b6001600160a01b03938416815291831660208301529091166040808301919091525190819003606001906000f0801580156100d5573d6000803e3d6000fd5b50604080516001600160a01b038316815290519193508392507f11d9ce4a8e8c2d9d30e2deb1409d886a9040bab2181a068aec3d726454f2ce3e919081900360200190a1509392505050565b60a18061012e8339019056fe6080604052348015600f57600080fd5b5060405160a138038060a183398181016040526060811015602f57600080fd5b5060400151600080546001600160a01b039092166001600160a01b0319909216919091179055603f8060626000396000f3fe6080604052600080fdfea2646970667358221220de0f09fe6d78de87ef0963e528c903879f1eb8cde95cb2dcd43520ae6e6ba13264736f6c634300060a0033a2646970667358221220eb41deff51173df8ecc29795a1731a43cff923f2670f4f3bd8461412c21dc44f64736f6c634300060a0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806345fc613b14610030575b600080fd5b6100686004803603606081101561004657600080fd5b506001600160a01b038135811691602081013582169160409091013516610084565b604080516001600160a01b039092168252519081900360200190f35b60008084848460405161009690610121565b6001600160a01b03938416815291831660208301529091166040808301919091525190819003606001906000f0801580156100d5573d6000803e3d6000fd5b50604080516001600160a01b038316815290519193508392507f11d9ce4a8e8c2d9d30e2deb1409d886a9040bab2181a068aec3d726454f2ce3e919081900360200190a1509392505050565b60a18061012e8339019056fe6080604052348015600f57600080fd5b5060405160a138038060a183398181016040526060811015602f57600080fd5b5060400151600080546001600160a01b039092166001600160a01b0319909216919091179055603f8060626000396000f3fe6080604052600080fdfea2646970667358221220de0f09fe6d78de87ef0963e528c903879f1eb8cde95cb2dcd43520ae6e6ba13264736f6c634300060a0033a2646970667358221220eb41deff51173df8ecc29795a1731a43cff923f2670f4f3bd8461412c21dc44f64736f6c634300060a0033",
+  "immutableReferences": {},
+  "sourceMap": "106:468:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "106:468:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;158:413;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;158:413:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;;;;158:413:0;;;;;;;;;;;;;;;289:26;328:27;390:7;412:6;433:9;358:95;;;;;:::i;:::-;-1:-1:-1;;;;;358:95:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;358:95:0;;;;;;;;;;;;;;;-1:-1:-1;523:40:0;;;-1:-1:-1;;;;;523:40:0;;;;;;328:125;;-1:-1:-1;328:125:0;;-1:-1:-1;523:40:0;;;;;;;;;;158:413;;;;;;:::o;-1:-1:-1:-;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.0 <0.7.0;\r\n\r\nimport \"./EgorasProxyInterface.sol\";\r\nimport \"./EgorasService.sol\";\r\n\r\ncontract EgorasProxy is EgorasProxyInterface {\r\n    function createEgorasService(\r\n        address _market,\r\n        address _token,\r\n        address _deployer\r\n    ) public returns (address _egorasServiceAddr) {\r\n        EgorasService egorasService = new EgorasService(\r\n            _market,\r\n            _token,\r\n            _deployer\r\n        );\r\n        _egorasServiceAddr = address(egorasService);\r\n        emit EgorasServiceCreated(_egorasServiceAddr);\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\xampp\\htdocs\\ngorasSmartContract\\contracts\\EgorasProxy.sol",
+  "ast": {
+    "absolutePath": "/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxy.sol",
+    "exportedSymbols": {
+      "EgorasProxy": [
+        38
+      ]
+    },
+    "id": 39,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:0"
+      },
+      {
+        "absolutePath": "/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxyInterface.sol",
+        "file": "./EgorasProxyInterface.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 39,
+        "sourceUnit": 46,
+        "src": "35:36:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasService.sol",
+        "file": "./EgorasService.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 39,
+        "sourceUnit": 67,
+        "src": "73:29:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4,
+              "name": "EgorasProxyInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 45,
+              "src": "130:20:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EgorasProxyInterface_$45",
+                "typeString": "contract EgorasProxyInterface"
+              }
+            },
+            "id": 5,
+            "nodeType": "InheritanceSpecifier",
+            "src": "130:20:0"
+          }
+        ],
+        "contractDependencies": [
+          45,
+          66
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 38,
+        "linearizedBaseContracts": [
+          38,
+          45
+        ],
+        "name": "EgorasProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 36,
+              "nodeType": "Block",
+              "src": "317:254:0",
+              "statements": [
+                {
+                  "assignments": [
+                    17
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 17,
+                      "mutability": "mutable",
+                      "name": "egorasService",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 36,
+                      "src": "328:27:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_EgorasService_$66",
+                        "typeString": "contract EgorasService"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 16,
+                        "name": "EgorasService",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 66,
+                        "src": "328:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_EgorasService_$66",
+                          "typeString": "contract EgorasService"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 24,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 20,
+                        "name": "_market",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "390:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 21,
+                        "name": "_token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9,
+                        "src": "412:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 22,
+                        "name": "_deployer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "433:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 19,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "358:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$returns$_t_contract$_EgorasService_$66_$",
+                        "typeString": "function (address,address,address) returns (contract EgorasService)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 18,
+                        "name": "EgorasService",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 66,
+                        "src": "362:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_EgorasService_$66",
+                          "typeString": "contract EgorasService"
+                        }
+                      }
+                    },
+                    "id": 23,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "358:95:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_EgorasService_$66",
+                      "typeString": "contract EgorasService"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "328:125:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 30,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 25,
+                      "name": "_egorasServiceAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14,
+                      "src": "464:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 28,
+                          "name": "egorasService",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 17,
+                          "src": "493:13:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_EgorasService_$66",
+                            "typeString": "contract EgorasService"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_EgorasService_$66",
+                            "typeString": "contract EgorasService"
+                          }
+                        ],
+                        "id": 27,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "485:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 26,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "485:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": null,
+                            "typeString": null
+                          }
+                        }
+                      },
+                      "id": 29,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "485:22:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "464:43:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 31,
+                  "nodeType": "ExpressionStatement",
+                  "src": "464:43:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33,
+                        "name": "_egorasServiceAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14,
+                        "src": "544:18:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 32,
+                      "name": "EgorasServiceCreated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 44,
+                      "src": "523:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 34,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "523:40:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 35,
+                  "nodeType": "EmitStatement",
+                  "src": "518:45:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "45fc613b",
+            "id": 37,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createEgorasService",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "mutability": "mutable",
+                  "name": "_market",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 37,
+                  "src": "197:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "197:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 37,
+                  "src": "223:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "223:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11,
+                  "mutability": "mutable",
+                  "name": "_deployer",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 37,
+                  "src": "248:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "248:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "186:86:0"
+            },
+            "returnParameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14,
+                  "mutability": "mutable",
+                  "name": "_egorasServiceAddr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 37,
+                  "src": "289:26:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "289:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "288:28:0"
+            },
+            "scope": 38,
+            "src": "158:413:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 39,
+        "src": "106:468:0"
+      }
+    ],
+    "src": "0:576:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxy.sol",
+    "exportedSymbols": {
+      "EgorasProxy": [
+        38
+      ]
+    },
+    "id": 39,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:0"
+      },
+      {
+        "absolutePath": "/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasProxyInterface.sol",
+        "file": "./EgorasProxyInterface.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 39,
+        "sourceUnit": 46,
+        "src": "35:36:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/xampp/htdocs/ngorasSmartContract/contracts/EgorasService.sol",
+        "file": "./EgorasService.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 39,
+        "sourceUnit": 67,
+        "src": "73:29:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4,
+              "name": "EgorasProxyInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 45,
+              "src": "130:20:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EgorasProxyInterface_$45",
+                "typeString": "contract EgorasProxyInterface"
+              }
+            },
+            "id": 5,
+            "nodeType": "InheritanceSpecifier",
+            "src": "130:20:0"
+          }
+        ],
+        "contractDependencies": [
+          45,
+          66
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 38,
+        "linearizedBaseContracts": [
+          38,
+          45
+        ],
+        "name": "EgorasProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 36,
+              "nodeType": "Block",
+              "src": "317:254:0",
+              "statements": [
+                {
+                  "assignments": [
+                    17
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 17,
+                      "mutability": "mutable",
+                      "name": "egorasService",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 36,
+                      "src": "328:27:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_EgorasService_$66",
+                        "typeString": "contract EgorasService"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 16,
+                        "name": "EgorasService",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 66,
+                        "src": "328:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_EgorasService_$66",
+                          "typeString": "contract EgorasService"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 24,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 20,
+                        "name": "_market",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "390:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 21,
+                        "name": "_token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9,
+                        "src": "412:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 22,
+                        "name": "_deployer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "433:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 19,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "358:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$returns$_t_contract$_EgorasService_$66_$",
+                        "typeString": "function (address,address,address) returns (contract EgorasService)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 18,
+                        "name": "EgorasService",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 66,
+                        "src": "362:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_EgorasService_$66",
+                          "typeString": "contract EgorasService"
+                        }
+                      }
+                    },
+                    "id": 23,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "358:95:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_EgorasService_$66",
+                      "typeString": "contract EgorasService"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "328:125:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 30,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 25,
+                      "name": "_egorasServiceAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14,
+                      "src": "464:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 28,
+                          "name": "egorasService",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 17,
+                          "src": "493:13:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_EgorasService_$66",
+                            "typeString": "contract EgorasService"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_EgorasService_$66",
+                            "typeString": "contract EgorasService"
+                          }
+                        ],
+                        "id": 27,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "485:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 26,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "485:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": null,
+                            "typeString": null
+                          }
+                        }
+                      },
+                      "id": 29,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "485:22:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "464:43:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 31,
+                  "nodeType": "ExpressionStatement",
+                  "src": "464:43:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33,
+                        "name": "_egorasServiceAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14,
+                        "src": "544:18:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 32,
+                      "name": "EgorasServiceCreated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 44,
+                      "src": "523:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 34,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "523:40:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 35,
+                  "nodeType": "EmitStatement",
+                  "src": "518:45:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "45fc613b",
+            "id": 37,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createEgorasService",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "mutability": "mutable",
+                  "name": "_market",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 37,
+                  "src": "197:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "197:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 37,
+                  "src": "223:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "223:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11,
+                  "mutability": "mutable",
+                  "name": "_deployer",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 37,
+                  "src": "248:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "248:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "186:86:0"
+            },
+            "returnParameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14,
+                  "mutability": "mutable",
+                  "name": "_egorasServiceAddr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 37,
+                  "src": "289:26:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "289:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "288:28:0"
+            },
+            "scope": 38,
+            "src": "158:413:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 39,
+        "src": "106:468:0"
+      }
+    ],
+    "src": "0:576:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {
+    "4": {
+      "events": {
+        "0x11d9ce4a8e8c2d9d30e2deb1409d886a9040bab2181a068aec3d726454f2ce3e": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "_egorasServiceAddr",
+              "type": "address"
+            }
+          ],
+          "name": "EgorasServiceCreated",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x5EA16288591cB9214416F6f3c2A164C5cDDc162F",
+      "transactionHash": "0x88a7a602e35411a2bc03dc79f7a45af7c7f1e99520635acbd9128d31b47e2618"
+    },
+    "5777": {
+      "events": {
+        "0x11d9ce4a8e8c2d9d30e2deb1409d886a9040bab2181a068aec3d726454f2ce3e": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "_egorasServiceAddr",
+              "type": "address"
+            }
+          ],
+          "name": "EgorasServiceCreated",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x163298092BDc306a1C644410444EC4C205bc422D",
+      "transactionHash": "0x7a058e01078b97a15116424ae54218fc3ef197a16e37d652077a1d55f6d13b74"
+    }
+  },
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-24T12:03:09.196Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
