@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.0;
+pragma solidity >=0.6.0 <0.8.0;
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.
@@ -61,10 +61,7 @@ interface IERC20 {
      */
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 
-    function mint(address account, uint256 amount) external  returns (bool);
     
-    function burnFrom(address account, uint256 amount) external;
-
     /**
      * @dev Emitted when `value` tokens are moved from one account (`from`) to
      * another (`to`).
@@ -78,6 +75,4 @@ interface IERC20 {
      * a call to {approve}. `value` is the new allowance.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
-
-    
 }
