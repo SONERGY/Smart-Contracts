@@ -13,7 +13,7 @@
 
 #### This public repo contains the SNGY Token smart contracts.
 
-Main WISE links:
+SNGY links:
 * [Official Website](https://sonergy.io/)
 * [White Paper](https://sonergy.io/)
 
